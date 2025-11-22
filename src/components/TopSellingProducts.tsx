@@ -80,25 +80,25 @@ export function TopSellingProducts() {
                 }}
               >
                 <td
-                  className="text-sm pb-3 pt-3"
+                  className="text-sm pb-3 pt-3 truncate max-w-[150px]"
                   style={{ color: getColor("text") }}
                 >
                   {product.name}
                 </td>
                 <td
-                  className="text-sm pb-3 pt-3"
+                  className="text-sm pb-3 pt-3 truncate"
                   style={{ color: getColor("text") }}
                 >
                   {formatCurrency(product.price)}
                 </td>
                 <td
-                  className="text-sm pb-3 pt-3"
+                  className="text-sm pb-3 pt-3 truncate"
                   style={{ color: getColor("text") }}
                 >
                   {product.quantity}
                 </td>
                 <td
-                  className="text-sm pb-3 pt-3"
+                  className="text-sm pb-3 pt-3 truncate"
                   style={{ color: getColor("text") }}
                 >
                   {formatCurrency(product.amount)}

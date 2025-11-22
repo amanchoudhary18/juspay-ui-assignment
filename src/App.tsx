@@ -100,29 +100,29 @@ function App() {
             </p>
 
             <div className="flex flex-wrap items-stretch gap-6">
-              <div className="min-w-[400px] flex-1 flex flex-col">
+              <div className="min-w-[350px] flex-1 flex flex-col">
                 <EcommerceMetrics />
               </div>
 
-              <div className="min-w-[400px] flex-1 flex flex-col">
+              <div className="min-w-[350px] flex-1 flex flex-col">
                 <ProjectionBarChart />
               </div>
             </div>
 
             <div className="mt-6 flex flex-wrap items-stretch gap-6">
-              <div className="min-w-[600px] flex-3">
+              <div className="min-w-[350px] flex-3">
                 <RevenueLineChart />
               </div>
 
-              <div className="min-w-[200px] flex-1">
+              <div className="min-w-[350px] flex-1">
                 <RevenueMap />
               </div>
 
-              <div className="min-w-[600px] flex-3">
+              <div className="min-w-[350px] flex-3">
                 <TopSellingProducts />
               </div>
 
-              <div className="min-w-[200px] flex-1">
+              <div className="min-w-[350px] flex-1">
                 <SalesDoughnut />
               </div>
             </div>
