@@ -1,73 +1,155 @@
-# React + TypeScript + Vite
+# Juspay UI Assignment - Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive dashboard application built with React and TypeScript, featuring dark/light theme support, interactive charts, and comprehensive e-commerce analytics.
 
-Currently, two official plugins are available:
+![Dashboard Screenshot](./src/assets/Website%20Screenshot.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌐 Live Demo
 
-## React Compiler
+**Website URL:** [https://juspay-ui-assignment.onrender.com/](https://juspay-ui-assignment.onrender.com/)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Tech Stack
 
-## Expanding the ESLint configuration
+### Core Framework
+- **React:** `18.3.1`
+- **React DOM:** `18.3.1`
+- **TypeScript:** `~5.6.2`
+- **Vite:** `^7.2.4`
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Styling
+- **Tailwind CSS:** `^4.1.17`
+- **@tailwindcss/vite:** `^4.1.17`
+- **PostCSS:** `^8.5.6`
+- **Autoprefixer:** `^10.4.22`
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Chart Libraries
+- **Chart.js:** `^4.5.1`
+- **react-chartjs-2:** `^5.3.1`
+- **Recharts:** `^3.4.1`
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Maps
+- **react-simple-maps:** `^3.0.0`
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Routing
+- **react-router-dom:** `^7.9.6`
+
+### Development Tools
+- **ESLint:** `^9.39.1`
+- **TypeScript ESLint:** `^8.46.4`
+- **@vitejs/plugin-react:** `^5.1.1`
+
+## ✨ Features
+
+- 🎨 **Dark/Light Theme Toggle** - Seamless theme switching with persistent state
+- 📊 **Interactive Charts** - Multiple chart types (Line, Bar, Doughnut, Maps)
+- 📱 **Responsive Design** - Mobile-first approach with adaptive layouts
+- 🎯 **E-commerce Metrics** - Revenue tracking, sales analytics, and projections
+- 📋 **Order Management** - Comprehensive order list with search and pagination
+- 🗺️ **Revenue Maps** - Geographic revenue visualization
+- 🎭 **Smooth Animations** - Fade-in and slide animations for better UX
+
+## 🛠️ Installation & Setup
+
+### Prerequisites
+
+- Node.js (v18 or higher recommended)
+- npm or yarn package manager
+
+### Steps to Run
+
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd juspay-ui-assignment
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open your browser**
+   - The application will be available at `http://localhost:5173` (or the port shown in terminal)
+
+### Build for Production
+
+```bash
+npm run build
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Preview Production Build
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run preview
 ```
+
+### Lint Code
+
+```bash
+npm run lint
+```
+
+## 📁 Project Structure
+
+```
+src/
+├── assets/          # Images, icons, and SVG files
+├── components/       # React components
+│   ├── Charts/      # Chart components
+│   ├── Navigation/  # Navigation components
+│   └── ...
+├── hooks/           # Custom React hooks
+│   └── useTheme.ts  # Theme management hook
+├── pages/           # Page components
+├── utils/           # Utility functions and data
+└── App.tsx          # Main application component
+```
+
+## 🎨 Tailwind CSS Usage
+
+This project uses **Tailwind CSS v4** with the Vite plugin for optimal performance. Tailwind is configured for:
+
+- Utility-first styling
+- Responsive design breakpoints
+- Dark mode support (via theme context)
+- Custom color palette
+- Animation utilities
+
+## 🔧 Key Components
+
+- **EcommerceMetrics** - Metric cards with trend indicators
+- **ProjectionBarChart** - Stacked bar chart for projections vs actuals
+- **RevenueLineChart** - Multi-line chart for revenue trends
+- **RevenueMap** - World map with revenue markers
+- **SalesDoughnut** - Curved doughnut chart for sales breakdown
+- **TopSellingProducts** - Product sales table
+- **OrderList** - Comprehensive order management table
+- **LeftNavigation** - Collapsible sidebar navigation
+- **RightNavigation** - Notifications and contacts panel
+- **Navbar** - Top navigation bar with search and theme toggle
+
+## 🌓 Theme System
+
+The application features a comprehensive theme system:
+
+- **Theme Context** - Centralized theme state management
+- **Theme Provider** - React Context provider for theme
+- **Dynamic Colors** - Theme-aware color utilities
+- **Automatic Icon Theming** - SVG icons adapt to theme
+
+## 📝 License
+
+This project is part of a UI assignment for Juspay.
+
+## 👨‍💻 Author
+
+Built as part of the Juspay UI assignment.
+
+---
+
+For more information, visit the [live demo](https://juspay-ui-assignment.onrender.com/).
