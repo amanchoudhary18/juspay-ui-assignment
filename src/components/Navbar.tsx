@@ -55,10 +55,11 @@ export function Navbar({
 
   return (
     <nav
-      className="fixed top-0 h-16 z-50 flex items-center gap-2 px-3 sm:px-4 md:px-6 transition-all duration-500 ease-in-out"
+      className="fixed top-0 h-16 z-50 flex items-center gap-2 px-3 sm:px-4 md:px-6 transition-all duration-500 ease-in-out border-b"
       style={{
         backgroundColor: getColor("background"),
         borderBottomColor: getThemeColor("#1C1C1C1A"),
+        borderBottomWidth: "1px",
         left: isMobile ? "0px" : isLeftNavOpen ? "212px" : "0px",
         right: isMobile ? "0px" : isRightNavOpen ? "280px" : "0px",
       }}
